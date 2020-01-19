@@ -9,6 +9,11 @@ public class App {
 
   private static int[] primes = {2, 3, 5, 7};
 
+  /**
+   * 檢查該數是否為質數
+   * @param num
+   * @return
+   */
   private static boolean chkNumIsPrime(int num) {
     boolean result = false;
 
