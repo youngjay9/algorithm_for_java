@@ -11,14 +11,14 @@ public class HanoiTower {
     if(n >0){
       hanoi(n-1, a, c, b);
 
-      logger.info("{} -> {}", a, b);
+      logger.info("{} -> {}", a, c);
 
-      hanoi(n-1, c, b, a);
+      hanoi(n-1, b, a, c);
     }
   }
 
   public static void main(String[] args){
-    hanoi(2, 'a', 'b', 'c');
+    hanoi(3, 'a', 'b', 'c');
   }
 
 }
