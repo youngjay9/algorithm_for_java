@@ -14,7 +14,7 @@ public class ArrayRearrange {
   }
 
   /**
-   * 將 array 中負整數依大小排左邊，正整數依大小排右邊
+   * 將 array 中負整數排左邊，正整數排右邊
    *
    * @param arr
    */
