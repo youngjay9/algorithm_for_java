@@ -7,10 +7,27 @@ public class DeleteFromLinkedList {
 
   private static Logger logger = LoggerFactory.getLogger(DeleteFromLinkedList.class);
 
+  public static int length(Node p) {
+
+    int length = 0;
+
+    while (p != null) {
+      length++;
+      p = p.getNext();
+    }
+
+    return length;
+  }
+
+
   public static Node deleteBySpecifiedPosition(Node p, int position) {
     Node first = p;
 
     Node q = null;
+
+    if(position<1 || position > length(p)){
+        return null;
+    }
 
     if(position == 1){
       first = p.getNext();

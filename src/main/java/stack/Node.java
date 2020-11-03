@@ -1,10 +1,8 @@
-package linkedlist;
+package stack;
 
 public class Node {
 
   private int data;
-
-  private Node prev;
 
   private Node next;
 
@@ -22,20 +20,5 @@ public class Node {
 
   public void setNext(Node next) {
     this.next = next;
-  }
-
-  public Node getPrev() {
-    return prev;
-  }
-
-  public void setPrev(Node prev) {
-    this.prev = prev;
-  }
-
-  @Override
-  public String toString() {
-    return "Node{" +
-        "data=" + data +
-        '}';
   }
 }

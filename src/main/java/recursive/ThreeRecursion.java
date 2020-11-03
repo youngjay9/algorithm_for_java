@@ -3,20 +3,21 @@ package recursive;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class StaticGlobal {
+public class ThreeRecursion {
 
-  private static Logger logger = LoggerFactory.getLogger(StaticGlobal.class);
+  private static Logger logger = LoggerFactory.getLogger(ThreeRecursion.class);
 
-  private static int fun(int n){
-     if (n > 0){
-       return fun( n-1) + n;
-     }
-     return 0;
+  private static void fun(int n) {
+    if (n > 0) {
+      logger.info("n:" + n);
+      fun(n - 1);
+      fun(n - 1);
+    }
   }
 
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
     int x = 5;
-    logger.info("fun(5): {}", fun(x));
+    fun(3);
   }
 }
