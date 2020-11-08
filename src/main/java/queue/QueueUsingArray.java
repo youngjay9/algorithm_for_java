@@ -7,10 +7,15 @@ public class QueueUsingArray {
 
   private static Logger logger = LoggerFactory.getLogger(QueueUsingArray.class);
 
+
+  public static boolean isEmpty(Queue<Integer> queue) {
+    return queue.getFront() == queue.getRear();
+  }
+
   public static void display(Queue<Integer> queue) {
 
-    for (int i = queue.getFront() + 1; i < queue.getRear(); i++) {
-        logger.info("{}", queue.getQ()[i]);
+    for (int i = queue.getFront() + 1; i <= queue.getRear(); i++) {
+      logger.info("{}", queue.getQ()[i]);
     }
 
   }
@@ -58,11 +63,14 @@ public class QueueUsingArray {
     enQueue(queue, 4);
     enQueue(queue, 5);
 
-    display(queue);
+//    display(queue);
 
-//    logger.info("deQueue:{}", deQueue(queue));
-//    logger.info("deQueue:{}", deQueue(queue));
-//    logger.info("deQueue:{}", deQueue(queue));
+    logger.info("deQueue:{}", deQueue(queue));
+    logger.info("deQueue:{}", deQueue(queue));
+    logger.info("deQueue:{}", deQueue(queue));
+    logger.info("deQueue:{}", deQueue(queue));
+    logger.info("deQueue:{}", deQueue(queue));
+    logger.info("deQueue:{}", deQueue(queue));
 
   }
 }

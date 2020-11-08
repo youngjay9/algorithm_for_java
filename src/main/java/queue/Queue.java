@@ -4,9 +4,9 @@ public class Queue<T> {
 
   private int size;
 
-  private T front;
+  private int front;
 
-  private T rear;
+  private int rear;
 
   private T[] Q;
 
@@ -18,19 +18,19 @@ public class Queue<T> {
     this.size = size;
   }
 
-  public T getFront() {
+  public int getFront() {
     return front;
   }
 
-  public void setFront(T front) {
+  public void setFront(int front) {
     this.front = front;
   }
 
-  public T getRear() {
+  public int getRear() {
     return rear;
   }
 
-  public void setRear(T rear) {
+  public void setRear(int rear) {
     this.rear = rear;
   }
 
